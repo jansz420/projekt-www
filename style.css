@@ -66,6 +66,8 @@ nav ul li a {
 	color: var(--primary-color);
 	font-weight: bold;
 	color: var(--text-color);
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
 }
 .active {
 	/* background-color: var(--bgclr); */
@@ -89,9 +91,10 @@ nav ul li a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: var(--scd-text-color);
-	padding: 8.25rem 0;
+	padding: 10.25rem 0;
 	text-align: center;
 	margin-top: -4rem;
+	min-height: 25rem;
 }
 .main .container {
 	background-color: var(--bgclr-alfa);
@@ -120,6 +123,7 @@ nav ul li a:hover {
 	width: 19rem;
 	margin: 1rem;
 	border-radius: 0.6rem;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 .oferta-box h3 {
@@ -138,6 +142,53 @@ nav ul li a:hover {
 	max-width: 44rem;
 	margin: auto;
 }
+
+
+/* DLACZEGO MY */
+#akordeon_sekcja{
+	background-image: url("dieta.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#akordeon_sekcja .container{
+	padding: 3rem;
+}
+
+#akordeon_sekcja h2{
+	text-align: center;
+	padding: 1rem;
+	
+}
+.akordeon {
+	cursor: pointer;
+  	background-color: var(--bgclr-alfa); 
+ 	color: var(--scd-text-color);
+ 	padding: 1.4rem;
+ 	width: 100%;
+	text-align: left;
+ 	border: none;
+ 	outline: none;
+ 	font-size: 1.3rem;
+	font-weight: 600;
+ 	transition: 400ms;
+	color: var(--secondary-color);
+}
+.chosen, .akordeon:hover {
+	color: var(--text-color);
+  background-color: var(--primary-color-alfa);
+}
+
+.panel {
+  padding: 0 1rem;
+  background-color: var(--bgclr-alfa);
+  font-size: larger;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
 
 /* STOPKA */
 footer {
