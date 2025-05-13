@@ -1,0 +1,152 @@
+:root {
+	--primary-color: #333333;
+	--primary-color-alfa: #33333380;
+	--secondary-color: #c62828;
+	--text-color: #eaeaea;
+	--scd-text-color: #1c2030;
+	--bgclr: #f9f9f9;
+	--bgclr-alfa: #f9f9f9b0;
+}
+/* bordowe c62828 8f001f*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: var(--bgclr);
+	color: #333;
+}
+
+.container {
+	width: 90%;
+	max-width: 75rem;
+	margin: auto;
+}
+
+/* NAGLOWEK */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background: var(--text-color);
+	padding: 1rem 1rem;
+	/* border-bottom: 2px solid #0b7102; */
+	min-height: 7%;
+	max-height: 10vh;
+	position: sticky;
+	top: 0;
+	background-color: #33333388;
+}
+
+header h1 {
+	margin-right: auto;
+	color: var(--text-color);
+	font-size: 1.2rem;
+	float: left;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+}
+
+nav ul li {
+	display: inline;
+	margin-left: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--primary-color);
+	font-weight: bold;
+	color: var(--text-color);
+}
+.active {
+	/* background-color: var(--bgclr); */
+	background-color: var(--bgclr-alfa);
+	border-radius: 80vw;
+	padding: 10px;
+}
+.active a {
+	color: var(--secondary-color);
+}
+
+nav ul li a:hover {
+	color: var(--secondary-color);
+}
+
+/* GLOWNA TRESC STRONY */
+.main {
+	/* background-color: var(--secondary-color); */
+	background-image: url("dietaa.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: var(--scd-text-color);
+	padding: 8.25rem 0;
+	text-align: center;
+	margin-top: -4rem;
+}
+.main .container {
+	background-color: var(--bgclr-alfa);
+	color: var(--primary-color);
+	border-radius: 1rem;
+}
+
+.hero h2 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+/* Oferta */
+.oferta {
+	padding: 60px 0;
+	background: var(--text-color);
+	text-align: center;
+}
+
+.oferta-boxy {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.oferta-box {
+	background: #f0f0f0;
+	padding: 30px;
+	width: 300px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+.oferta-box h3 {
+	margin-bottom: 10px;
+	color: var(--secondary-color);
+}
+
+/* O nas */
+.o-nas {
+	padding: 60px 0;
+	background: #fefefe;
+	text-align: center;
+}
+
+.o-nas p {
+	max-width: 700px;
+	margin: auto;
+}
+
+/* Stopka */
+footer {
+	background: #333;
+	color: white;
+	padding: 20px 0;
+	text-align: center;
+	margin-top: 40px;
+}
