@@ -1,6 +1,6 @@
 :root {
 	--primary-color: #333333;
-	--primary-color-alfa: #33333380;
+	--primary-color-alfa: #33333395;
 	--secondary-color: #c62828;
 	--text-color: #eaeaea;
 	--scd-text-color: #1c2030;
@@ -41,7 +41,7 @@ header {
 	max-height: 10vh;
 	position: sticky;
 	top: 0;
-	background-color: #33333388;
+	background-color: var(--primary-color-alfa);
 }
 
 header h1 {
@@ -97,14 +97,10 @@ nav ul li a:hover {
 	background-color: var(--bgclr-alfa);
 	color: var(--primary-color);
 	border-radius: 1rem;
+	width: 50%;
 }
 
-.hero h2 {
-	font-size: 2rem;
-	margin-bottom: 1rem;
-}
-
-/* Oferta */
+/* OFERTA */
 .oferta {
 	padding: 3.75rem 0;
 	background: var(--text-color);
@@ -131,7 +127,7 @@ nav ul li a:hover {
 	color: var(--secondary-color);
 }
 
-/* O nas */
+/* O NAS */
 .o-nas {
 	padding: 3.75rem 0;
 	background: var(--bgclr2);
@@ -143,7 +139,7 @@ nav ul li a:hover {
 	margin: auto;
 }
 
-/* Stopka */
+/* STOPKA */
 footer {
 	background: var(--primary-color);
 	color: var(--text-color);
