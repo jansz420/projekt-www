@@ -43,9 +43,13 @@ header {
 	top: 0;
 	background-color: var(--primary-color-alfa);
 }
+header img{
+	border-radius: 50%;
+}
 
 header h1 {
 	margin-right: auto;
+	margin-left: 1%;
 	color: var(--text-color);
 	font-size: 1.2rem;
 	float: left;
@@ -143,52 +147,49 @@ nav ul li a:hover {
 	margin: auto;
 }
 
-
 /* DLACZEGO MY */
-#akordeon_sekcja{
+#akordeon_sekcja {
 	background-image: url("dieta.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-#akordeon_sekcja .container{
+#akordeon_sekcja .container {
 	padding: 3rem;
 }
 
-#akordeon_sekcja h2{
+#akordeon_sekcja h2 {
 	text-align: center;
 	padding: 1rem;
-	
 }
 .akordeon {
 	cursor: pointer;
-  	background-color: var(--bgclr-alfa); 
- 	color: var(--scd-text-color);
- 	padding: 1.4rem;
- 	width: 100%;
+	background-color: var(--bgclr-alfa);
+	color: var(--scd-text-color);
+	padding: 1.4rem;
+	width: 100%;
 	text-align: left;
- 	border: none;
- 	outline: none;
- 	font-size: 1.3rem;
+	border: none;
+	outline: none;
+	font-size: 1.3rem;
 	font-weight: 600;
- 	transition: 400ms;
+	transition: 400ms;
 	color: var(--secondary-color);
 }
-.chosen, .akordeon:hover {
+.chosen,
+.akordeon:hover {
 	color: var(--text-color);
-  background-color: var(--primary-color-alfa);
+	background-color: var(--primary-color-alfa);
 }
 
 .panel {
-  padding: 0 1rem;
-  background-color: var(--bgclr-alfa);
-  font-size: larger;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+	padding: 0 1rem;
+	background-color: var(--bgclr-alfa);
+	font-size: larger;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
-
-
 
 /* STOPKA */
 footer {
