@@ -120,14 +120,35 @@ nav ul li a:hover {
 	justify-content: space-around;
 	margin-top: 2rem;
 }
+#of_1 {
+	background-image: url(images/dieta_standard.jpg);
+	background-size: cover;
+	background-position: center;
+}
+#of_2 {
+	background-image: url(images/deita_sport.jpg);
+	background-size: cover;
+	background-position: center;
+}
+#of_3 {
+	background-image: url(images/dieta_vege.jpg);
+	background-size: cover;
+	background-position: center;
+}
 
 .oferta-box {
-	background: var(--bgclr2);
-	padding: 2rem;
+	padding: 5rem;
 	width: 19rem;
 	margin: 1rem;
 	border-radius: 0.6rem;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.tlo {
+	text-align: center;
+	background-color: var(--bgclr-alfa);
+	color: var(--primary-color);
+	border-radius: 1rem;
+	padding: 0.2rem;
 }
 
 .oferta-box h3 {
