@@ -50,9 +50,16 @@ header img {
 header h1 {
 	margin-right: auto;
 	margin-left: 1%;
+	
+	float: left;
+}
+
+header h1 a {
 	color: var(--text-color);
 	font-size: 1.2rem;
-	float: left;
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+	text-decoration: none;
 }
 
 nav ul {
@@ -83,7 +90,7 @@ nav ul li a {
 	color: var(--secondary-color);
 }
 
-nav ul li a:hover {
+nav ul li a:hover, header h1 a:hover{
 	color: var(--secondary-color);
 }
 
@@ -97,7 +104,7 @@ nav ul li a:hover {
 	color: var(--scd-text-color);
 	padding: 10.25rem 0;
 	text-align: center;
-	margin-top: -4rem;
+	margin-top: -6rem;
 	min-height: 25rem;
 }
 .main .container {
