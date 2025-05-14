@@ -43,7 +43,7 @@ header {
 	top: 0;
 	background-color: var(--primary-color-alfa);
 }
-header img{
+header img {
 	border-radius: 50%;
 }
 
@@ -90,7 +90,7 @@ nav ul li a:hover {
 /* GLOWNA TRESC STRONY */
 .main {
 	/* background-color: var(--secondary-color); */
-	background-image: url("3.jpg");
+	background-image: url("/images/3.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -149,7 +149,7 @@ nav ul li a:hover {
 
 /* DLACZEGO MY */
 #akordeon_sekcja {
-	background-image: url("dieta.jpg");
+	background-image: url("images/dieta.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
