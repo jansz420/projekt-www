@@ -50,7 +50,7 @@ header img {
 header h1 {
 	margin-right: auto;
 	margin-left: 1%;
-	
+
 	float: left;
 }
 
@@ -90,7 +90,7 @@ nav ul li a {
 	color: var(--secondary-color);
 }
 
-nav ul li a:hover, header h1 a:hover{
+nav ul li a:hover, header h1 a:hover {
 	color: var(--secondary-color);
 }
 
@@ -128,17 +128,17 @@ nav ul li a:hover, header h1 a:hover{
 	margin-top: 2rem;
 }
 #of_1 {
-	background-image: url(images/dieta_standard.jpg);
+	background-image: url(/images/dieta_standard.jpg);
 	background-size: cover;
 	background-position: center;
 }
 #of_2 {
-	background-image: url(images/deita_sport.jpg);
+	background-image: url(/images/deita_sport.jpg);
 	background-size: cover;
 	background-position: center;
 }
 #of_3 {
-	background-image: url(images/dieta_vege.jpg);
+	background-image: url(/images/dieta_vege.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -177,7 +177,7 @@ nav ul li a:hover, header h1 a:hover{
 
 /* DLACZEGO MY */
 #akordeon_sekcja {
-	background-image: url("images/dieta.jpg");
+	background-image: url("/images/dieta.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -220,10 +220,10 @@ nav ul li a:hover, header h1 a:hover{
 }
 
 /*OPINIE*/
-#opinie{
+#opinie {
 	margin-top: 3rem;
 }
-#opinie h2{
+#opinie h2 {
 	text-align: center;
 }
 .opinia {
