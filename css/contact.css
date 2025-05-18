@@ -1,5 +1,5 @@
 .contact {
-    background-image: url("/images/3.jpg");
+    background-image: url("/images/contact-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -37,6 +37,7 @@
     min-height: 20rem;
     margin: 2rem;
     padding: 2rem;
+    position: relative;
 }
 
 .contact-box form {
@@ -53,6 +54,11 @@
     height: 10rem;
     width: 95%;
     margin: 1%;
+    max-width: 95%;
+    min-width: 95%;
+    max-height: 35rem;
+    min-height: 10rem;
+    font-family: Arial, sans-serif;
 }
 
 .contact-box form button {
@@ -82,4 +88,27 @@
 .contact-box p {
     text-align: left;
     font-weight: bold;
+}
+
+#overlay {
+    display: flex;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: var(--scd-text-color);
+    color: var(--bgclr-alfa);
+    border-radius: 1rem;
+    transition: ease-in-out 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    padding: 5% 10%;
+}
+
+#overlay.active-overlay {
+    opacity: 0.95;
+    pointer-events: all;
 }

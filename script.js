@@ -36,3 +36,21 @@ function prevSlide() {
 setInterval(() => {
 	nextSlide();
 }, 7000);
+
+// KONTAKT SUBMIT
+
+const contactForm = document.getElementById("contact-form");
+const submitOverlay = document.getElementById("overlay");
+
+contactForm.addEventListener("submit", function(showOverlay) {
+	showOverlay.preventDefault();
+
+	submitOverlay.classList.add("active-overlay");
+
+	document.body.style.cursor = "progress";
+	setTimeout(function() {
+		contactForm.submit();
+		document.body.style.cursor = "default";
+	}, 4000);
+	
+});
