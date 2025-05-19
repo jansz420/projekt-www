@@ -33,13 +33,17 @@
             <div class="contact-box">
                 <h2>Formularz kontaktowy</h2>
                 <p>Masz pytania lub chcesz nawiązać współpracę? Pisz śmiało!</p>
-                <form>
-                    <input type="text" placeholder="Twoje imię">
-                    <input type="email" placeholder="Twój adres e-mail">
-                    <textarea placeholder="Podaj treść zapytania"></textarea>
-                    <button>Wyślij</button>
+                <form id="contact-form">
+                    <input type="text" name="customer-name" placeholder="Twoje imię" required>
+                    <input type="email" name="customer-email" placeholder="Twój adres e-mail" required>
+                    <textarea name="customer-message" placeholder="Podaj treść zapytania (max 500 znaków)" maxlength="500" required></textarea>
+                    <button type="submit">Wyślij</button>
                 </form>
+                <div id="overlay">
+                    <p>Dziękujemy za wiadomość!</p>
+                </div>
             </div>
+            
             <div class="contact-box">
                 <h2>Biuro Obsługi Klienta</h2>
                 <ul>
@@ -50,6 +54,7 @@
                 <p>e-mail: kontakt@lunchitoboxito.pl</p>
                 <h2>Dane firmy</h2>
                 <p>Zwierzyniecka 14 lok. 205, 15-333 Białystok</p>
+                <p>Poczopek Industries &reg; Sp z o.o.</p>
             </div>
         </div>
     </section>
