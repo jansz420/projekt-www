@@ -53,6 +53,31 @@
 	padding: 0.7rem;
 	cursor: pointer;
 }
+
 .arrows button:hover {
 	background: rgba(0, 0, 0, 0.8);
+}
+
+#list {
+	display: inline-block;
+	text-align: center;
+}
+
+.single-product {
+	height: 35rem;
+    margin: 2.5rem;
+    padding: 2.5rem;
+	width: 25rem;
+	display: inline-block;
+	border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: var(--bgclr);
+}
+
+.single-product:hover {
+	background-color:var(--bgclr-alfa);
+}
+.single-product img {
+	height: 20rem;
+	width: 20rem;
 }

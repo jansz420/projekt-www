@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <img src="/images/logo.png" width="4%" height="4%" alt="logo">
+        <img src="images/logo.png" width="4%" height="4%" alt="logo">
         <h1><a href="index.html">Lunchito Boxito</a></h1>
         <nav>
             <ul>
@@ -50,16 +50,7 @@
             <button onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
-    <section id= "list">
-        <script>
-            fetch("list.php")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("list").innerHTML = html;
-                })
-        </script>
-    </section>
-
+    <section id= "list"></section>
     <footer id="kontakt">
         <div class="container">
             <p>&copy; 2025 Lunchito Boxito| kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
@@ -68,3 +59,10 @@
 </body>
 
 </html>
+<script>
+            fetch("list.php")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("list").innerHTML = html;
+                })
+</script>
