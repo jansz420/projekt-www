@@ -99,7 +99,7 @@ header h1 a:hover {
 /* GLOWNA TRESC STRONY */
 .main {
 	/* background-color: var(--secondary-color); */
-	background-image: url("/images/3.jpg");
+	background-image: url("images/3.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -130,17 +130,17 @@ header h1 a:hover {
 	margin-top: 2rem;
 }
 #of_1 {
-	background-image: url(/images/dieta_standard.jpg);
+	background-image: url(images/dieta_standard.jpg);
 	background-size: cover;
 	background-position: center;
 }
 #of_2 {
-	background-image: url(/images/deita_sport.jpg);
+	background-image: url(images/deita_sport.jpg);
 	background-size: cover;
 	background-position: center;
 }
 #of_3 {
-	background-image: url(/images/dieta_vege.jpg);
+	background-image: url(images/dieta_vege.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -179,7 +179,7 @@ header h1 a:hover {
 
 /* DLACZEGO MY */
 #akordeon_sekcja {
-	background-image: url("/images/dieta.jpg");
+	background-image: url("images/dieta.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
