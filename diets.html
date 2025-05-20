@@ -50,8 +50,14 @@
             <button onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
-    <section >
-        
+    <section id= "list">
+        <script>
+            fetch("list.php")
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("list").innerHTML = html;
+                })
+        </script>
     </section>
 
     <footer id="kontakt">
