@@ -51,12 +51,32 @@
             <button onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
-    <section>
-        <form class="filterPanel">
-            <fieldset>
-                <label></label>
-            </fieldset>
-        </form>
+    <section id="diets">
+        <h3>Znajdź swoją dietę</h3>
+            <form id="filter-panel">   
+                <fieldset>
+                    <legend>Cena</legend>
+                    <label for="min-price">Od:</label>
+                    <input type="text" id="min-price">
+                    <label for="max-price">Do:</label>
+                    <input type="text" id="max-price">
+                </fieldset>
+                <fieldset>
+                    <legend>Rodzaj diety</legend>
+                    <input type="checkbox" id="vege-button" checked>
+                    <label>Dieta wegetariańska</label>
+                    <input type="checkbox" id="no-vege-button" checked>
+                    <label>Dieta mięsna</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Kaloryczność</legend>
+                    <label for="min-calories">Od:</label>
+                    <input type="text" id="min-calories">
+
+                    <label for="max-calories">Do:</label>
+                    <input type="text" id="max-calories">
+                </fieldset>
+            </form>
     <section id= "list"></section>
     </section>
     <footer id="kontakt">

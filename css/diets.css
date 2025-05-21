@@ -58,6 +58,27 @@
 	background: rgba(0, 0, 0, 0.8);
 }
 
+#diets h3 {
+	text-align: center;
+	margin: 0.5rem 0rem;
+}
+
+#filter-panel {
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	justify-self: center;
+	display: flex;
+	padding: 0.5rem;
+	border-radius: 1rem;
+}
+
+#filter-panel  fieldset{
+	float: left;
+	border: 1px solid var(--primary-color);
+	border-radius: 1rem;
+	text-align: center;
+	padding: 0.5rem;
+}
+
 #list {
 	display: inline-block;
 	text-align: center;
