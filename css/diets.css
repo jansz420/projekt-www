@@ -61,6 +61,7 @@
 #list {
 	display: inline-block;
 	text-align: center;
+	
 }
 
 .single-product {
@@ -68,16 +69,32 @@
     margin: 2.5rem;
     padding: 2.5rem;
 	width: 25rem;
-	display: inline-block;
+	display: inline-grid;
 	border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     background: var(--bgclr);
 }
 
-.single-product:hover {
-	background-color:var(--bgclr-alfa);
-}
 .single-product img {
 	height: 20rem;
 	width: 20rem;
+}
+
+.single-product:hover {
+	height: 35.5rem;
+	width: 25.5rem;
+	margin: 2.25rem;
+}
+
+.single-product:hover img {
+	height: 20.25rem;
+	width: 20.25rem;
+}
+
+.single-product:hover .product-body {
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+	margin-top: 0rem;
+	margin-bottom: 0.5rem;
+
 }
