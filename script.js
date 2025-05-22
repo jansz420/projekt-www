@@ -86,8 +86,6 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--scd-text-color', '#1c2030');
 		document.documentElement.style.setProperty('--bgclr2', '#fefefe');
 		document.documentElement.style.setProperty('--bgclr3', '#eaeaea');
-		document.documentElement.style.setProperty('--secondary-color', '#c62828');
-		document.documentElement.style.setProperty('--text-color', '#eaeaea');
 		document.documentElement.style.setProperty('--footer-color', '#333333');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.2)');
 		darkMode = false;
@@ -97,11 +95,9 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--bgclr', '#333333');
 		document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
 		document.documentElement.style.setProperty('--scd-text-color', '#eaeaea');
-		document.documentElement.style.setProperty('--bgclr2', '#1c2030');
+		document.documentElement.style.setProperty('--bgclr2', '#2a2a2a');
 		document.documentElement.style.setProperty('--bgclr3', '#434343');
-		document.documentElement.style.setProperty('--secondary-color', '#eaeaea');
-		document.documentElement.style.setProperty('--text-color', '#c62828');
-		document.documentElement.style.setProperty('--footer-color', '#1c2030');
+		document.documentElement.style.setProperty('--footer-color', '#2a2a2a');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
 		darkMode = true;
 	}
