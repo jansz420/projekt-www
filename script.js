@@ -1,5 +1,5 @@
 // AKORDEON
-var akordeon = document.getElementsByClassName("akordeon");
+const akordeon = document.getElementsByClassName("akordeon");
 var i;
 
 if (akordeon) {
@@ -78,7 +78,6 @@ if (toggle && menu) {
 // DARKMODE
 
 let darkMode = false;
-
 function toggleTheme() {
 	if (darkMode) {  //wylacza
 		document.documentElement.style.setProperty('--primary-color', '#333333');
