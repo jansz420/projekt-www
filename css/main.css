@@ -9,6 +9,7 @@
 	--bgclr3: #eaeaea;
 	--bgclr-alfa: #f9f9f9b0;
 	--footer-color: #333333;
+	--input-color: #fff;
 	--box-shadow: rgba(0, 0, 0, 0.2);
 }
 /* bordowe c62828 8f001f*/
@@ -316,15 +317,17 @@ footer {
 	bottom: 20px;
 	right: 20px;
 	padding: 10px 15px;
-	background-color: var(--bgclr-alfa);
-	color: var(--primary-color);
+	background-color: var(--primary-color);
+	color: var(--bgclr-alfa);
+	font-weight: bold;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	z-index: 1000;
 }
+
 @media (max-width: 1000px) {
-	.darkmode-toggle {
+	.darkmode-toggle span {
 		display: none;
 	}
 }

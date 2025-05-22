@@ -47,6 +47,8 @@
 	width: 46%;
 	height: 2rem;
 	margin: 1%;
+    background-color: var(--input-color);
+    color: var(--primary-color);
 }
 
 .contact-box form textarea {
@@ -58,6 +60,8 @@
 	max-height: 35rem;
 	min-height: 10rem;
 	font-family: Arial, sans-serif;
+    background-color: var(--input-color);
+    color: var(--primary-color);
 }
 
 .contact-box form button {
