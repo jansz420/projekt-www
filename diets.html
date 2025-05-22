@@ -25,7 +25,6 @@
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
             <img src="images/triangle.png" alt="menu" id="dropdown-toggle">
-            <button onclick="toggleTheme()">DM</button>
         </nav>
 
     </header>
@@ -33,7 +32,7 @@
     <section class="carousel">
         <div class="slides" id="slides">
             <div class="slide">
-               <img src="images/dieta_standard.jpg" alt="Dieta Śródziemnomorska"> <!-- TRZEBA POZMIENIAĆ FOTY -->
+                <img src="images/dieta_standard.jpg" alt="Dieta Śródziemnomorska"> <!-- TRZEBA POZMIENIAĆ FOTY -->
                 <h3>Dieta Śródziemnomorska</h3>
                 <p>Bogata w oliwę z oliwek, warzywa i ryby – wspiera zdrowie serca.</p>
             </div>
@@ -53,8 +52,9 @@
             <button onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
-    <section id= "list"></section>
-    <footer id="kontakt">
+    <section id="list"></section>
+    <button class="darkmode-toggle" onclick="toggleTheme()">🌙 Tryb ciemny</button>
+    <footer>
         <div class="container">
             <p>&copy; 2025 Lunchito Boxito| kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
         </div>
@@ -63,9 +63,9 @@
 
 </html>
 <script>
-            fetch("list.php")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("list").innerHTML = html;
-                })
+    fetch("list.php")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("list").innerHTML = html;
+        })
 </script>

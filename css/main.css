@@ -10,7 +10,6 @@
 	--bgclr-alfa: #f9f9f9b0;
 	--footer-color: #333333;
 	--box-shadow: rgba(0, 0, 0, 0.2);
-
 }
 /* bordowe c62828 8f001f*/
 
@@ -157,7 +156,6 @@ header h1 a:hover {
 	}
 }
 
-
 /* GLOWNA TRESC STRONY */
 .main {
 	/* background-color: var(--secondary-color); */
@@ -168,7 +166,7 @@ header h1 a:hover {
 	color: var(--scd-text-color);
 	padding: 10.25rem 0;
 	text-align: center;
-	margin-top: -6rem;
+	margin-top: -7rem;
 	min-height: 25rem;
 	font-weight: 500;
 }
@@ -214,8 +212,7 @@ header h1 a:hover {
 	width: 19rem;
 	margin: 1rem;
 	border-radius: 0.6rem;
-	/* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19); */
-	box-shadow: 1px 2px 2px 1px var(--box-shadow), 7px 7px 5px 1px var(--box-shadow);
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .tlo {
 	text-align: center;
@@ -315,19 +312,19 @@ footer {
 
 /*DARKMODE*/
 .darkmode-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  background-color: var(--bgclr-alfa);
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 15px;
+	background-color: var(--bgclr-alfa);
 	color: var(--primary-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1000;
 }
-@media (max-width: 1000px){
-	.darkmode-toggle{
+@media (max-width: 1000px) {
+	.darkmode-toggle {
 		display: none;
 	}
 }
