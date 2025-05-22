@@ -1,188 +1,197 @@
 .about-us {
-    background-image: url("../images/contact-bg.jpg");
+	background-image: url("../images/contact-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-    color: var(--scd-text-color);
+	color: var(--scd-text-color);
 	padding: 10.25rem 0;
 	text-align: center;
-	margin-top: -6rem;
+	margin-top: -7rem;
 	min-height: 25rem;
 }
 
 .about-us-intro {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-    width: 80%;
-    margin: 1% auto;
-    background-color: var(--bgclr);
-    border-radius: 1rem;
-    padding: 1em;
+	width: 80%;
+	margin: 1% auto;
+	background-color: var(--bgclr);
+	border-radius: 1rem;
+	padding: 1em;
 }
 
 .about-us-intro p {
-    font-size: 1.4em;
-    font-weight: bold;
+	font-size: 1.4em;
+	font-weight: bold;
 }
 .about-us-intro p span {
-    color: var(--secondary-color);
+	color: var(--secondary-color);
 }
 
 /* ZDJECIA ZARZADU */
 
 .ceos {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-    width: 80%;
-    margin: 1% auto;
-    background-color: var(--bgclr-alfa);
-    border-radius: 1rem;
+	width: 80%;
+	margin: 1% auto;
+	background-color: var(--bgclr-alfa);
+	border-radius: 1rem;
 }
 
 .ceo {
-    margin: 3%;
-    background-color: var(--bgclr);
+	margin: 3%;
+	background-color: var(--bgclr);
 	color: var(--primary-color);
 	border-radius: 1rem;
-    max-width: 25rem;
-    max-height: 35rem;
-    padding: 1em;
-    font-weight: bold;
-    font-size: 1.3em;
+	max-width: 25rem;
+	max-height: 35rem;
+	padding: 1em;
+	font-weight: bold;
+	font-size: 1.3em;
 }
 
 .ceo img {
-    width: 18rem;
-    max-height: auto;
-    object-fit: cover;
-    border-radius: 1rem;
+	width: 18rem;
+	max-height: auto;
+	object-fit: cover;
+	border-radius: 1rem;
 }
 
 .ceo h3 {
-    color: var(--secondary-color);
+	color: var(--secondary-color);
 }
 
 /* INFO Z MAPKA */
 
 .company-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 80%;
-    margin: 1% auto;
-    background-color: var(--bgclr);
-    border-radius: 1rem;
-    padding: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	width: 80%;
+	margin: 1% auto;
+	background-color: var(--bgclr);
+	border-radius: 1rem;
+	padding: 1em;
 }
 
-.company-top, .company-bottom{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
+.company-top,
+.company-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
 }
 
-#map, .company-text-right, .company-text-left, .company-photos {
-    max-width: 48%;
-    max-height: auto;
+#map,
+.company-text-right,
+.company-text-left,
+.company-photos {
+	max-width: 48%;
+	max-height: auto;
 }
 
 #map iframe {
-    height: 25rem;
-    width: 25rem;
-    border-radius: 1rem;
-    margin: 1%;
+	height: 25rem;
+	width: 25rem;
+	border-radius: 1rem;
+	margin: 1%;
 }
 
-.company-text-right p, .company-text-left p{
-    font-weight: bold;
-    font-size: 1.3em;
-    text-align: left;
-    margin: 5% 3%;
-    max-width: 50rem;
+.company-text-right p,
+.company-text-left p {
+	font-weight: bold;
+	font-size: 1.3em;
+	text-align: left;
+	margin: 5% 3%;
+	max-width: 50rem;
 }
 
 .company-text-left p {
-    /* font-weight: bold;
+	/* font-weight: bold;
     font-size: 1.3em; */
-    text-align: right;
-    /* margin: 5% 3%;
+	text-align: right;
+	/* margin: 5% 3%;
     max-width: 50rem; */
 }
 
 .company-photos img {
-    width: 23rem;
-    height: auto;
-    border-radius: 1rem;
-    margin: 1%;
+	width: 23rem;
+	height: auto;
+	border-radius: 1rem;
+	margin: 1%;
 }
 #company-photo1 {
-    position: relative;
-    left: 10%;
+	position: relative;
+	left: 10%;
 }
 
 #company-photo2 {
-    position: relative;
-    right: 10%;
+	position: relative;
+	right: 10%;
 }
 
 .company-text-left p a {
-    color: var(--secondary-color);
-    text-decoration: none;
+	color: var(--secondary-color);
+	text-decoration: none;
 	font-weight: bold;
 	transition-duration: 200ms;
 	transition-timing-function: ease-out;
-    border-radius: 80vw;
-    padding: 1%;
-    flex-wrap: nowrap;
+	border-radius: 80vw;
+	padding: 1%;
+	flex-wrap: nowrap;
 }
 
 .company-text-left p a:hover {
-    color: var(--text-color);
-    background-color: var(--secondary-color);
+	color: var(--text-color);
+	background-color: var(--secondary-color);
 }
 
 @media (max-width: 1200px) {
-    .company-top, .company-bottom {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #map, .company-text-right, .company-text-left, .company-photos {
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .company-photos img {
-      width: 90%;
-      margin: 1rem auto;
-    }
-  
-    #company-photo1,
-    #company-photo2 {
-      position: static;
-      left: auto;
-      right: auto;
-    }
-  
-    .company-text-left p,
-    .company-text-right p {
-      text-align: left;
-    }
+	.company-top,
+	.company-bottom {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    #map iframe {
-        width: 20rem;
-        height: 20rem;
-    }
-  }
-  
-  @media (max-width: 800px) {
-    #map iframe {
-        width: 15rem;
-        height: 15rem;
-    }
-  }
+	#map,
+	.company-text-right,
+	.company-text-left,
+	.company-photos {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.company-photos img {
+		width: 90%;
+		margin: 1rem auto;
+	}
+
+	#company-photo1,
+	#company-photo2 {
+		position: static;
+		left: auto;
+		right: auto;
+	}
+
+	.company-text-left p,
+	.company-text-right p {
+		text-align: left;
+	}
+
+	#map iframe {
+		width: 20rem;
+		height: 20rem;
+	}
+}
+
+@media (max-width: 800px) {
+	#map iframe {
+		width: 15rem;
+		height: 15rem;
+	}
+}

@@ -25,7 +25,6 @@
                 <li class="active"><a href="contact.html">Kontakt</a></li>
             </ul>
             <img src="images/triangle.png" alt="menu" id="dropdown-toggle">
-            <button onclick="toggleTheme()">DM</button>
         </nav>
 
     </header>
@@ -39,14 +38,15 @@
                 <form id="contact-form">
                     <input type="text" name="customer-name" placeholder="Twoje imię" required>
                     <input type="email" name="customer-email" placeholder="Twój adres e-mail" required>
-                    <textarea name="customer-message" placeholder="Podaj treść zapytania (max 500 znaków)" maxlength="500" required></textarea>
+                    <textarea name="customer-message" placeholder="Podaj treść zapytania (max 500 znaków)"
+                        maxlength="500" required></textarea>
                     <button type="submit">Wyślij</button>
                 </form>
                 <div id="overlay">
                     <p>Dziękujemy za wiadomość!</p>
                 </div>
             </div>
-            
+
             <div class="contact-box">
                 <h2>Biuro Obsługi Klienta</h2>
                 <ul>
@@ -61,8 +61,9 @@
             </div>
         </div>
     </section>
+    <button class="darkmode-toggle" onclick="toggleTheme()">🌙 Tryb ciemny</button>
 
-    <footer id="kontakt">
+    <footer>
         <div class="container">
             <p>&copy; 2025 Lunchito Boxito| kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
         </div>
