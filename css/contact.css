@@ -65,7 +65,7 @@
     width: 10rem;
     height: 2.5rem;
     font-size: 1.3em;
-    background-color: #c62828;
+    background-color: var(--secondary-color);
     color: var(--text-color);
     border-radius: 1rem;
     border: none;
@@ -76,7 +76,7 @@
 
 .contact-box form button:hover {
     background-color: var(--bgclr-alfa);
-    color: #c62828;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 

@@ -78,31 +78,31 @@ if (toggle && menu) {
 // DARKMODE
 
 let darkMode = false;
-
-  function toggleDarkMode() {
-    const root = document.documentElement;
-
-    if (!darkMode) {
-      // Tryb ciemny
-       root.style.setProperty('--primary-color', '#eaeaea');
-      //root.style.setProperty('--primary-color-alfa', '#eaeaeacc');
-      root.style.setProperty('--secondary-color', '#ff5252');
-      root.style.setProperty('--text-color', '#eaeaea');
-      root.style.setProperty('--scd-text-color', '#1c2030');
-      root.style.setProperty('--bgclr', '#1e1e1e');
-      root.style.setProperty('--bgclr2', '#2c2c2c');
-      root.style.setProperty('--bgclr-alfa', '#1e1e1edd');
-      darkMode = true;
-    } else {
-      // Tryb jasny
-      root.style.setProperty('--primary-color', '#333333');
-      root.style.setProperty('--primary-color-alfa', '#333333cc');
-      root.style.setProperty('--secondary-color', '#c62828');
-      root.style.setProperty('--text-color', '#eaeaea');
-      root.style.setProperty('--scd-text-color', '#1c2030');
-      root.style.setProperty('--bgclr', '#f9f9f9');
-      root.style.setProperty('--bgclr2', '#fefefe');
-      root.style.setProperty('--bgclr-alfa', '#f9f9f9dd');
-      darkMode = false;
+function toggleTheme() {
+	if (darkMode) {  //wylacza
+		document.documentElement.style.setProperty('--primary-color', '#333333');
+		document.documentElement.style.setProperty('--bgclr', '#f9f9f9');
+		document.documentElement.style.setProperty('--bgclr-alfa', '#f9f9f9b0');
+		document.documentElement.style.setProperty('--scd-text-color', '#1c2030');
+		document.documentElement.style.setProperty('--bgclr2', '#fefefe');
+		document.documentElement.style.setProperty('--bgclr3', '#eaeaea');
+		document.documentElement.style.setProperty('--secondary-color', '#c62828');
+		document.documentElement.style.setProperty('--text-color', '#eaeaea');
+		document.documentElement.style.setProperty('--footer-color', '#333333');
+		document.documentElement.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.2)');
+		darkMode = false;
+	}
+	else {           //wlacza
+		document.documentElement.style.setProperty('--primary-color', '#eaeaea');
+		document.documentElement.style.setProperty('--bgclr', '#333333');
+		document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
+		document.documentElement.style.setProperty('--scd-text-color', '#eaeaea');
+		document.documentElement.style.setProperty('--bgclr2', '#1c2030');
+		document.documentElement.style.setProperty('--bgclr3', '#434343');
+		document.documentElement.style.setProperty('--secondary-color', '#eaeaea');
+		document.documentElement.style.setProperty('--text-color', '#c62828');
+		document.documentElement.style.setProperty('--footer-color', '#1c2030');
+		document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
+		darkMode = true;
 	}
 }
