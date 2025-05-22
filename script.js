@@ -1,5 +1,5 @@
 // AKORDEON
-var akordeon = document.getElementsByClassName("akordeon");
+const akordeon = document.getElementsByClassName("akordeon");
 var i;
 
 if (akordeon) {
@@ -75,3 +75,34 @@ if (toggle && menu) {
 	});
 }
 
+// DARKMODE
+
+let darkMode = false;
+
+  function toggleDarkMode() {
+    const root = document.documentElement;
+
+    if (!darkMode) {
+      // Tryb ciemny
+       root.style.setProperty('--primary-color', '#eaeaea');
+      //root.style.setProperty('--primary-color-alfa', '#eaeaeacc');
+      root.style.setProperty('--secondary-color', '#ff5252');
+      root.style.setProperty('--text-color', '#eaeaea');
+      root.style.setProperty('--scd-text-color', '#1c2030');
+      root.style.setProperty('--bgclr', '#1e1e1e');
+      root.style.setProperty('--bgclr2', '#2c2c2c');
+      root.style.setProperty('--bgclr-alfa', '#1e1e1edd');
+      darkMode = true;
+    } else {
+      // Tryb jasny
+      root.style.setProperty('--primary-color', '#333333');
+      root.style.setProperty('--primary-color-alfa', '#333333cc');
+      root.style.setProperty('--secondary-color', '#c62828');
+      root.style.setProperty('--text-color', '#eaeaea');
+      root.style.setProperty('--scd-text-color', '#1c2030');
+      root.style.setProperty('--bgclr', '#f9f9f9');
+      root.style.setProperty('--bgclr2', '#fefefe');
+      root.style.setProperty('--bgclr-alfa', '#f9f9f9dd');
+      darkMode = false;
+	}
+}

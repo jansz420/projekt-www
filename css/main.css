@@ -6,7 +6,7 @@
 	--scd-text-color: #1c2030;
 	--bgclr: #f9f9f9;
 	--bgclr2: #fefefe;
-	--bgclr-alfa: #f9f9f9b0;
+	--bgclr-alfa: #f9f9f9dd;
 }
 /* bordowe c62828 8f001f*/
 
@@ -20,7 +20,7 @@ body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	background-color: var(--bgclr);
-	color: #333;
+	color: var(--primary-color);
 }
 
 .container {
@@ -34,11 +34,8 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	background: var(--text-color);
 	padding: 1rem 1rem;
-	/* border-bottom: 2px solid #0b7102; */
 	min-height: 7%;
-	/* max-height: 10vh; */
 	position: sticky;
 	top: 0;
 	background-color: var(--primary-color-alfa);
@@ -163,6 +160,7 @@ header h1 a:hover {
 	text-align: center;
 	margin-top: -6rem;
 	min-height: 25rem;
+	font-weight: 500;
 }
 .main .container {
 	background-color: var(--bgclr-alfa);
@@ -295,9 +293,28 @@ header h1 a:hover {
 
 /* STOPKA */
 footer {
-	background: var(--primary-color);
-	color: var(--text-color);
+	background: #333333;
+	color: #eaeaea;
 	padding: 1.25rem 0;
 	text-align: center;
 	margin-top: 2.5rem;
+}
+
+/*DARKMODE*/
+.darkmode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: var(--bgclr-alfa);
+	color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+@media (max-width: 1000px){
+	.darkmode-toggle{
+		display: none;
+	}
 }
