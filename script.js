@@ -78,8 +78,9 @@ if (toggle && menu) {
 // DARKMODE
 
 let darkMode = localStorage.getItem("darkMode") == "true";
+const toggleText = document.querySelector(".darkmode-toggle");
 
-if (darkMode) {
+if (darkMode) {   //jesli juz jest odpalony
 	document.documentElement.style.setProperty('--primary-color', '#eaeaea');
 	document.documentElement.style.setProperty('--bgclr', '#333333');
 	document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
@@ -89,11 +90,12 @@ if (darkMode) {
 	document.documentElement.style.setProperty('--footer-color', '#2a2a2a');
 	document.documentElement.style.setProperty('--input-color', '#555555');
 	document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
+	toggleText.innerHTML = "☀️ <span>Tryb jasny</span>";
 }
 
-function toggleTheme() {
+function toggleTheme() {  
 	darkMode = !darkMode;
-	if (darkMode) {
+	if (darkMode) {    //wlacza darkmode
 		document.documentElement.style.setProperty('--primary-color', '#eaeaea');
 		document.documentElement.style.setProperty('--bgclr', '#333333');
 		document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
@@ -104,7 +106,8 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--input-color', '#555555');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
 		localStorage.setItem("darkMode", "true");
-	} else {
+		toggleText.innerHTML = "☀️ <span>Tryb jasny</span>";
+	} else {		//wylacza darkmode
 		document.documentElement.style.setProperty('--primary-color', '#333333');
 		document.documentElement.style.setProperty('--bgclr', '#f9f9f9');
 		document.documentElement.style.setProperty('--bgclr-alfa', '#f9f9f9b0');
@@ -115,5 +118,6 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--input-color', '#fff');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.2)');
 		localStorage.setItem("darkMode", "false");
+		toggleText.innerHTML = "🌙 <span>Tryb ciemny</span>";
 	}
 }
