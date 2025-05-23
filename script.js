@@ -77,21 +77,23 @@ if (toggle && menu) {
 
 // DARKMODE
 
-let darkMode = false;
+let darkMode = localStorage.getItem("darkMode") == "true";
+
+if (darkMode) {
+	document.documentElement.style.setProperty('--primary-color', '#eaeaea');
+	document.documentElement.style.setProperty('--bgclr', '#333333');
+	document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
+	document.documentElement.style.setProperty('--scd-text-color', '#eaeaea');
+	document.documentElement.style.setProperty('--bgclr2', '#2a2a2a');
+	document.documentElement.style.setProperty('--bgclr3', '#434343');
+	document.documentElement.style.setProperty('--footer-color', '#2a2a2a');
+	document.documentElement.style.setProperty('--input-color', '#555555');
+	document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
+}
+
 function toggleTheme() {
-	if (darkMode) {  //wylacza
-		document.documentElement.style.setProperty('--primary-color', '#333333');
-		document.documentElement.style.setProperty('--bgclr', '#f9f9f9');
-		document.documentElement.style.setProperty('--bgclr-alfa', '#f9f9f9b0');
-		document.documentElement.style.setProperty('--scd-text-color', '#1c2030');
-		document.documentElement.style.setProperty('--bgclr2', '#fefefe');
-		document.documentElement.style.setProperty('--bgclr3', '#eaeaea');
-		document.documentElement.style.setProperty('--footer-color', '#333333');
-		document.documentElement.style.setProperty('--input-color', '#fff');
-		document.documentElement.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.2)');
-		darkMode = false;
-	}
-	else {           //wlacza
+	darkMode = !darkMode;
+	if (darkMode) {
 		document.documentElement.style.setProperty('--primary-color', '#eaeaea');
 		document.documentElement.style.setProperty('--bgclr', '#333333');
 		document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
@@ -101,6 +103,17 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--footer-color', '#2a2a2a');
 		document.documentElement.style.setProperty('--input-color', '#555555');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
-		darkMode = true;
+		localStorage.setItem("darkMode", "true");
+	} else {
+		document.documentElement.style.setProperty('--primary-color', '#333333');
+		document.documentElement.style.setProperty('--bgclr', '#f9f9f9');
+		document.documentElement.style.setProperty('--bgclr-alfa', '#f9f9f9b0');
+		document.documentElement.style.setProperty('--scd-text-color', '#1c2030');
+		document.documentElement.style.setProperty('--bgclr2', '#fefefe');
+		document.documentElement.style.setProperty('--bgclr3', '#eaeaea');
+		document.documentElement.style.setProperty('--footer-color', '#333333');
+		document.documentElement.style.setProperty('--input-color', '#fff');
+		document.documentElement.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.2)');
+		localStorage.setItem("darkMode", "false");
 	}
 }
