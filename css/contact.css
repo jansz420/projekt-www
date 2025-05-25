@@ -41,6 +41,7 @@
 
 .contact-box form {
 	padding: 1rem;
+	border-radius: 1rem;
 }
 
 .contact-box form input {
@@ -48,7 +49,12 @@
 	height: 2rem;
 	margin: 1%;
     background-color: var(--input-color);
+	border-radius: 1rem;
     color: var(--primary-color);
+	padding: 1%;
+	border-color: var(--primary-color);
+	border-width: 0.2em;
+	transition-duration: 300ms;
 }
 
 .contact-box form textarea {
@@ -62,6 +68,16 @@
 	font-family: Arial, sans-serif;
     background-color: var(--input-color);
     color: var(--primary-color);
+	border-radius: 1rem;
+	padding: 1%;
+	border-color: var(--primary-color);
+	border-width: 0.2em;
+	transition-duration: 300ms;
+}
+
+.contact-box form input:focus, .contact-box form textarea:focus {
+	outline: none;
+	border-color: var(--secondary-color);
 }
 
 .contact-box form button {
