@@ -42,26 +42,82 @@ if (slides && totalSlides) {
 }
 
 
-// KONTAKT SUBMIT
 
+// KONTAKT FORM
 const contactForm = document.getElementById("contact-form");
+const showErrors = document.getElementById("contact-error");
 const submitOverlay = document.getElementById("overlay");
 
-if (contactForm && submitOverlay) {
-	contactForm.addEventListener("submit", function(showOverlay) {
-		showOverlay.preventDefault();
-	
-		submitOverlay.classList.add("active-overlay");
-	
-		document.body.style.cursor = "progress";
-		setTimeout(function() {
-			contactForm.submit();
-			document.body.style.cursor = "default";
-		}, 4000);
-		
-	});
+const contactName = document.getElementById("contact-name");
+const contactEmail = document.getElementById("contact-email");
+const contactMessage = document.getElementById("contact-mess");
+
+const nameRegex = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(?: [A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)?$/;
+const mailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/i;
+
+// LOCAL STORAGE KONTAKT
+
+let activeOverlay = localStorage.getItem("SubmitOverlay") == "true";
+
+if (activeOverlay) {
+	submitOverlay.classList.add("active-overlay");
+	localStorage.removeItem("SubmitOverlay")
+	setTimeout(function() {	
+		submitOverlay.classList.remove("active-overlay");
+	}, 4000);
 }
 
+if (contactName && contactEmail && contactMessage) {
+	contactName.value = localStorage.getItem("NameContact") || "";
+	contactEmail.value = localStorage.getItem("EmailContact") || "";
+	contactMessage.value = localStorage.getItem("MessageContact") || "";
+	
+
+	contactName.addEventListener("input", function () {
+		localStorage.setItem("NameContact", contactName.value.trim());
+	});
+
+	contactEmail.addEventListener("input", function () {
+		localStorage.setItem("EmailContact", contactEmail.value.trim());
+	});
+
+	contactMessage.addEventListener("input", function () {
+		localStorage.setItem("MessageContact", contactMessage.value.trim());
+	});
+	
+}
+
+if (contactForm && submitOverlay && showErrors) {
+	contactForm.addEventListener("submit", function(e) {
+		let messages = []
+
+		if (!nameRegex.test(contactName.value.trim())) {
+			messages.push("Imię musi zaczynać się wielką literą i może zawierać tylko litery (np. Jan, Anna Maria)");
+		}
+
+		if (!mailRegex.test(contactEmail.value.trim())) {
+			messages.push("Podaj poprawny adres e-mail, np. jan.kowalski@example.com");
+		}
+
+		
+		if(messages.length > 0){
+			e.preventDefault();
+			showErrors.innerHTML = messages.join('<br>');
+			showErrors.style.display = "flex"
+		}
+
+		else {  //pokazuje overlaya i wykonuje submit
+			
+			localStorage.setItem("SubmitOverlay", "true")
+
+			localStorage.removeItem("NameContact")
+			localStorage.removeItem("EmailContact")
+			localStorage.removeItem("MessageContact")
+
+			contactForm.submit();
+		}
+	});
+}
 
 // DROPDOWN MENU
 
@@ -79,6 +135,12 @@ if (toggle && menu) {
 
 let darkMode = localStorage.getItem("darkMode") == "true";
 const toggleText = document.querySelector(".darkmode-toggle");
+
+document.documentElement.classList.add("no-transitions");
+
+setTimeout(function() { //by nie bylo animacji przy przelaczaniu stron
+	document.documentElement.classList.remove("no-transitions");
+}, 100);
 
 if (darkMode) {   //jesli juz jest odpalony
 	document.documentElement.style.setProperty('--primary-color', '#eaeaea');
@@ -105,6 +167,7 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--footer-color', '#2a2a2a');
 		document.documentElement.style.setProperty('--input-color', '#555555');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(255, 255, 255, 0.2)');
+		document.documentElement.style.setProperty('--secondary-color', '#fa3254');
 		localStorage.setItem("darkMode", "true");
 		toggleText.innerHTML = "☀️ <span>Tryb jasny</span>";
 	} else {		//wylacza darkmode
@@ -117,7 +180,9 @@ function toggleTheme() {
 		document.documentElement.style.setProperty('--footer-color', '#333333');
 		document.documentElement.style.setProperty('--input-color', '#fff');
 		document.documentElement.style.setProperty('--box-shadow', 'rgba(0, 0, 0, 0.2)');
+		document.documentElement.style.setProperty('--secondary-color', '#c62828');
 		localStorage.setItem("darkMode", "false");
 		toggleText.innerHTML = "🌙 <span>Tryb ciemny</span>";
 	}
 }
+

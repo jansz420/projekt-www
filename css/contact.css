@@ -52,9 +52,14 @@
 	border-radius: 1rem;
     color: var(--primary-color);
 	padding: 1%;
-	border-color: var(--primary-color);
-	border-width: 0.2em;
+	border: none;
 	transition-duration: 300ms;
+}
+
+@media (max-width: 600px) {
+	.contact-box form input {
+		min-width: 95%;
+	}
 }
 
 .contact-box form textarea {
@@ -70,14 +75,13 @@
     color: var(--primary-color);
 	border-radius: 1rem;
 	padding: 1%;
-	border-color: var(--primary-color);
-	border-width: 0.2em;
+	border: none;
+	outline: none;
 	transition-duration: 300ms;
 }
 
 .contact-box form input:focus, .contact-box form textarea:focus {
-	outline: none;
-	border-color: var(--secondary-color);
+	outline: 0.2em solid var(--secondary-color);
 }
 
 .contact-box form button {
@@ -130,4 +134,12 @@
 #overlay.active-overlay {
 	opacity: 0.95;
 	pointer-events: all;
+}
+
+#contact-error {
+	background-color: var(--secondary-color);
+	border: 0.1em solid var(--text-color);
+	padding: 1%;
+	color: var(--text-color);
+	display: none;
 }
