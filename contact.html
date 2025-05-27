@@ -36,14 +36,15 @@
                 <h2>Formularz kontaktowy</h2>
                 <p>Masz pytania lub chcesz nawiązać współpracę? Pisz śmiało!</p>
                 <form id="contact-form">
-                    <input type="text" name="customer-name" placeholder="Twoje imię" required>
-                    <input type="email" name="customer-email" placeholder="Twój adres e-mail" required>
-                    <textarea name="customer-message" placeholder="Podaj treść zapytania (max 500 znaków)" maxlength="500" required></textarea>
+                    <input id="contact-name" type="text" name="customer-name" placeholder="Twoje imię" minlength="2" maxlength="20" required>
+                    <input id="contact-email" type="email" name="customer-email" placeholder="Twój adres e-mail" required>
+                    <textarea id="contact-mess" name="customer-message" placeholder="Podaj treść zapytania (10-500 znaków)" minlength="10" maxlength="500" required></textarea>
                     <button type="submit">Wyślij</button>
                 </form>
                 <div id="overlay">
                     <p>Dziękujemy za wiadomość!</p>
                 </div>
+                <div id="contact-error"></div>
             </div>
 
             <div class="contact-box">
