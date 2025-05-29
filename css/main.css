@@ -291,6 +291,17 @@ header h1 a:hover {
 }
 
 /*OPINIE*/
+@keyframes bangbang {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
 #opinie {
 	margin-top: 3rem;
 }
@@ -304,6 +315,9 @@ header h1 a:hover {
 	border-left: 0.5rem solid var(--secondary-color);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 	border-radius: 0.8rem;
+	animation: bangbang linear;
+	animation-timeline: view();
+	animation-range: entry 0% cover 20%;
 }
 
 /* STOPKA */
