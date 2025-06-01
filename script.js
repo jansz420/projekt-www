@@ -145,7 +145,7 @@ setTimeout(function() { //by nie bylo animacji przy przelaczaniu stron
 if (darkMode) {   //jesli juz jest odpalony
 	document.documentElement.style.setProperty('--primary-color', '#eaeaea');
 	document.documentElement.style.setProperty('--bgclr', '#333333');
-	document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
+	document.documentElement.style.setProperty('--bgclr-alfa', '#2a2a2ab0');
 	document.documentElement.style.setProperty('--scd-text-color', '#eaeaea');
 	document.documentElement.style.setProperty('--bgclr2', '#2a2a2a');
 	document.documentElement.style.setProperty('--bgclr3', '#434343');
@@ -160,7 +160,7 @@ function toggleTheme() {
 	if (darkMode) {    //wlacza darkmode
 		document.documentElement.style.setProperty('--primary-color', '#eaeaea');
 		document.documentElement.style.setProperty('--bgclr', '#333333');
-		document.documentElement.style.setProperty('--bgclr-alfa', '#333333cc');
+		document.documentElement.style.setProperty('--bgclr-alfa', '#2a2a2ab0');
 		document.documentElement.style.setProperty('--scd-text-color', '#eaeaea');
 		document.documentElement.style.setProperty('--bgclr2', '#2a2a2a');
 		document.documentElement.style.setProperty('--bgclr3', '#434343');
@@ -173,7 +173,7 @@ function toggleTheme() {
 	} else {		//wylacza darkmode
 		document.documentElement.style.setProperty('--primary-color', '#333333');
 		document.documentElement.style.setProperty('--bgclr', '#f9f9f9');
-		document.documentElement.style.setProperty('--bgclr-alfa', '#f9f9f9b0');
+		document.documentElement.style.setProperty('--bgclr-alfa', '#e1dfdfb0');
 		document.documentElement.style.setProperty('--scd-text-color', '#1c2030');
 		document.documentElement.style.setProperty('--bgclr2', '#fefefe');
 		document.documentElement.style.setProperty('--bgclr3', '#eaeaea');

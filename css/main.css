@@ -118,7 +118,7 @@ header h1 a:hover {
 		display: flex;
 		flex-direction: column;
 		width: 30%;
-		background-color: var(--primary-color-alfa);
+		background-color: var(--bgclr-alfa);
 		position: absolute;
 		top: 100%;
 		right: 1rem;
@@ -142,7 +142,6 @@ header h1 a:hover {
 		border-radius: 0;
 		height: 3rem;
 		width: auto;
-		transform: rotate(-90deg);
 		cursor: pointer;
 		transition-duration: 250ms;
 		transition-timing-function: ease-in-out;
