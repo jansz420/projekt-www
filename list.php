@@ -10,7 +10,7 @@ if (isset($_GET['meat']) && $_GET['meat'] == "1") {
     $conditions[] = "wege = 0";
 }
 if (empty($conditions)) {
-    echo '<div class="single-product">
+    echo '<div class="empty-list">
         <p>Brak dopasowanych diet.</p>
         </div>';
     exit;
@@ -35,7 +35,7 @@ if ($result && $result->num_rows > 0) {
         echo '</div>';
     }
 } else {
-    echo '<div class="single-product">
+    echo '<div class="empty-list">
         <p>Brak dopasowanych diet.</p>
         </div>';
 }

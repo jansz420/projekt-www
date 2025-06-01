@@ -33,11 +33,25 @@
 #list {
 	display: inline-block;
 	text-align: center;
+	width: 100%;
 	
 }
 
-#list p{
-	margin-left: 1rem;
+.empty-list {
+    
+    padding: 3rem;
+    background-color: var(--bgclr-alfa);
+    border-radius: 1rem;
+    color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	width: 25rem;
+	display: inline-block;
+}
+
+.empty-list p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .single-product {
