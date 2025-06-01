@@ -12,18 +12,16 @@
 
 <body>
     <header>
-        <img src="images/logo.png" width="4%" height="4%" alt="logo">
+        <img src="images/logo.png" alt="logo">
         <h1><a href="index.html">Lunchito Boxito</a></h1>
         <nav>
-            <ul>
+            <ul id="default-menu">
                 <li><a href="diets.html">Diety</a></li>
-                <li><a href="Menu">Menu</a></li>
-                <li><a href="Cennik">Cennik</a></li>
-                <li><a href="Promocje">Promocje</a></li>
-                <li><a href="Dostawa">Dostawa</a></li>
+                <li><a href="promotion.html">Promocje</a></li>
                 <li><a href="about-us.html">O nas</a></li>
                 <li class="active"><a href="contact.html">Kontakt</a></li>
             </ul>
+            <img src="images/triangle.png" alt="menu" id="dropdown-toggle">
         </nav>
 
     </header>
@@ -35,16 +33,21 @@
                 <h2>Formularz kontaktowy</h2>
                 <p>Masz pytania lub chcesz nawiązać współpracę? Pisz śmiało!</p>
                 <form id="contact-form">
-                    <input type="text" name="customer-name" placeholder="Twoje imię" required>
-                    <input type="email" name="customer-email" placeholder="Twój adres e-mail" required>
-                    <textarea name="customer-message" placeholder="Podaj treść zapytania (max 500 znaków)" maxlength="500" required></textarea>
+                    <input id="contact-name" type="text" name="customer-name" placeholder="Twoje imię" minlength="2"
+                        maxlength="20" required>
+                    <input id="contact-email" type="email" name="customer-email" placeholder="Twój adres e-mail"
+                        required>
+                    <textarea id="contact-mess" name="customer-message"
+                        placeholder="Podaj treść zapytania (10-500 znaków)" minlength="10" maxlength="500"
+                        required></textarea>
                     <button type="submit">Wyślij</button>
                 </form>
                 <div id="overlay">
                     <p>Dziękujemy za wiadomość!</p>
                 </div>
+                <div id="contact-error"></div>
             </div>
-            
+
             <div class="contact-box">
                 <h2>Biuro Obsługi Klienta</h2>
                 <ul>
@@ -59,10 +62,11 @@
             </div>
         </div>
     </section>
+    <button class="darkmode-toggle" onclick="toggleTheme()">🌙 <span>Tryb ciemny</span></button>
 
-    <footer id="kontakt">
+    <footer>
         <div class="container">
-            <p>&copy; 2025 Lunchito Boxito| kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
+            <p>&copy; 2025 Lunchito Boxito | kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
         </div>
     </footer>
 </body>

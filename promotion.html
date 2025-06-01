@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promocje – Lunchito Boxito</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/promo.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo">
+        <h1><a href="index.html">Lunchito Boxito</a></h1>
+        <nav>
+            <ul id="default-menu">
+                <li><a href="diets.html">Diety</a></li>
+                <li class="active"><a href="promotion.html">Promocje</a></li>
+                <li><a href="about-us.html">O nas</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <img src="images/triangle.png" alt="menu" id="dropdown-toggle">
+        </nav>
+
+    </header>
+
+    <section class="promotion">
+        <div class="carousel">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <img src="images/maj.png" alt="Promocja majowa">
+                    <h3>☀️Poczuj smak nadchodzących Wakacji!</h3>
+                    <p>Z kodem <strong>MAJ2025</strong> dieta Paleo Classic taniej o <strong>10%</strong>!</p>
+                </div>
+                <div class="slide">
+                    <img src="images/student.png" alt="Promocja dla studentów">
+                    <h3>🎓Zniżka Studencka</h3>
+                    <p>Dla studentów aż <strong>15%</strong> zniżki!</p>
+                </div>
+                <div class="slide">
+                    <img src="images/yearly_promo.png" alt="Roczna promocja">
+                    <h3>Roczna Promocja</h3>
+                    <p>Przy zakupie diet na cały rok – <strong>1 miesiąc gratis!</strong></p>
+                </div>
+            </div>
+            <div class="arrows">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+        <div class="regulamin container">
+            <h3>📜 Regulamin promocji</h3>
+            <ol>
+                <li>Promocje nie łączą się ze sobą, chyba że zaznaczono inaczej.</li>
+                <li>Każda promocja obowiązuje przez określony czas – szczegóły dostępne w opisie promocji.</li>
+                <li>Promocje obowiązują wyłącznie przy zamówieniach online, dokonanych przez stronę lunchitoboxito.pl.
+                </li>
+                <li>Promocje nie mają zastosowania do zamówień indywidualnie negocjowanych.</li>
+                <li>Organizatorem promocji jest Lunchito Boxito sp. z o.o.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="faq container">
+        <h2>❓ Najczęściej zadawane pytania (FAQ)</h2>
+
+        <div class="opinia">
+            <h3>Jak mogę skorzystać z kodu promocyjnego?</h3>
+            <p>Podczas składania zamówienia online wpisz kod w odpowiednie pole. Zniżka naliczy się automatycznie przed
+                płatnością.</p>
+        </div>
+
+        <div class="opinia">
+            <h3>Czy promocje można łączyć?</h3>
+            <p>Z zasady nie – chyba że w regulaminie konkretnej promocji zaznaczono inaczej.</p>
+        </div>
+
+        <div class="opinia">
+            <h3>Czy mogę przenieść kod promocyjny na później?</h3>
+            <p>Kody mają określoną datę ważności – sprawdź szczegóły w opisie promocji. Po tym czasie nie będą aktywne.
+            </p>
+        </div>
+
+        <div class="opinia">
+            <h3>Czy promocje obowiązują przy zamówieniu telefonicznym?</h3>
+            <p>Nie – promocje obowiązują wyłącznie przy zamówieniach online na naszej stronie.</p>
+        </div>
+
+        <div class="opinia">
+            <h3>Na czym polega roczna promocja?</h3>
+            <p>Przy opłaceniu planu dietetycznego na cały rok otrzymujesz 1 miesiąc gratis. Szczegóły znajdziesz w
+                sekcji „Promocje”.</p>
+        </div>
+    </section>
+
+
+    <button class="darkmode-toggle" onclick="toggleTheme()">🌙 <span>Tryb ciemny</span></button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lunchito Boxito | kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
+        </div>
+    </footer>
+</body>
+
+</html>

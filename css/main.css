@@ -1,12 +1,16 @@
 :root {
 	--primary-color: #333333;
-	--primary-color-alfa: #33333395;
+	--primary-color-alfa: #434343cc;
 	--secondary-color: #c62828;
 	--text-color: #eaeaea;
 	--scd-text-color: #1c2030;
 	--bgclr: #f9f9f9;
 	--bgclr2: #fefefe;
+	--bgclr3: #eaeaea;
 	--bgclr-alfa: #f9f9f9b0;
+	--footer-color: #333333;
+	--input-color: #fff;
+	--box-shadow: rgba(0, 0, 0, 0.2);
 }
 /* bordowe c62828 8f001f*/
 
@@ -14,13 +18,19 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition-duration: 1000ms;
+	transition-timing-function: ease-in-out;
+}
+
+.no-transitions * {
+	transition: none !important;
 }
 
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	background-color: var(--bgclr);
-	color: #333;
+	color: var(--primary-color);
 }
 
 .container {
@@ -34,11 +44,8 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	background: var(--text-color);
 	padding: 1rem 1rem;
-	/* border-bottom: 2px solid #0b7102; */
 	min-height: 7%;
-	max-height: 10vh;
 	position: sticky;
 	top: 0;
 	background-color: var(--primary-color-alfa);
@@ -46,6 +53,8 @@ header {
 }
 header img {
 	border-radius: 50%;
+	max-height: 5rem;
+	width: auto;
 }
 
 header h1 {
@@ -94,6 +103,62 @@ nav ul li a {
 nav ul li a:hover,
 header h1 a:hover {
 	color: var(--secondary-color);
+	/* border-top: 0.2em solid var(--secondary-color); */
+	/* border-bottom: 0.2em solid var(--secondary-color);
+	border-radius: 1%; */
+	padding: 0.5em;
+}
+
+/* ROZWIJANE MENU */
+
+#dropdown-toggle {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	nav ul {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		background-color: var(--primary-color-alfa);
+		position: absolute;
+		top: 100%;
+		right: 1rem;
+		border-radius: 1rem;
+		padding: 1rem;
+		opacity: 0;
+		transform: translateY(-120%);
+		transition-duration: 400ms;
+		transition-timing-function: ease-in-out;
+	}
+
+	nav ul.show {
+		opacity: 100;
+		transform: translateY(0);
+	}
+
+	#dropdown-toggle {
+		position: relative;
+		right: 3rem;
+		display: block;
+		border-radius: 0;
+		height: 3rem;
+		width: auto;
+		transform: rotate(-90deg);
+		cursor: pointer;
+		transition-duration: 250ms;
+		transition-timing-function: ease-in-out;
+	}
+
+	#dropdown-toggle.open {
+		transform: rotate(-180deg);
+	}
+
+	nav ul li {
+		display: block;
+		margin: 10px 0;
+		text-align: center;
+	}
 }
 
 /* GLOWNA TRESC STRONY */
@@ -106,20 +171,22 @@ header h1 a:hover {
 	color: var(--scd-text-color);
 	padding: 10.25rem 0;
 	text-align: center;
-	margin-top: -6rem;
+	margin-top: -7rem;
 	min-height: 25rem;
+	font-weight: 500;
 }
 .main .container {
 	background-color: var(--bgclr-alfa);
 	color: var(--primary-color);
 	border-radius: 1rem;
 	width: 50%;
+	padding: 1em;
 }
 
 /* OFERTA */
 .oferta {
 	padding: 3.75rem 0;
-	background: var(--text-color);
+	background: var(--bgclr3);
 	text-align: center;
 }
 
@@ -150,7 +217,7 @@ header h1 a:hover {
 	width: 19rem;
 	margin: 1rem;
 	border-radius: 0.6rem;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .tlo {
 	text-align: center;
@@ -179,7 +246,7 @@ header h1 a:hover {
 
 /* DLACZEGO MY */
 #akordeon_sekcja {
-	background-image: url("../images/dieta.jpg");
+	background-image: url("../images/contact-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -191,11 +258,13 @@ header h1 a:hover {
 #akordeon_sekcja h2 {
 	text-align: center;
 	padding: 1rem;
+	background-color: var(--bgclr-alfa);
+	border-radius: 1rem 1rem 0 0;
 }
 .akordeon {
 	cursor: pointer;
 	background-color: var(--bgclr-alfa);
-	color: var(--scd-text-color);
+	/* color: var(--scd-text-color); */
 	padding: 1.4rem;
 	width: 100%;
 	text-align: left;
@@ -222,6 +291,17 @@ header h1 a:hover {
 }
 
 /*OPINIE*/
+@keyframes bangbang {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
 #opinie {
 	margin-top: 3rem;
 }
@@ -229,19 +309,43 @@ header h1 a:hover {
 	text-align: center;
 }
 .opinia {
-	background: var(--bgclr);
+	background: var(--bgclr2);
 	padding: 2rem;
 	margin-top: 1rem;
 	border-left: 0.5rem solid var(--secondary-color);
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 	border-radius: 0.8rem;
+	animation: bangbang linear;
+	animation-timeline: view();
+	animation-range: entry 0% cover 20%;
 }
 
 /* STOPKA */
 footer {
-	background: var(--primary-color);
+	background: var(--footer-color);
 	color: var(--text-color);
 	padding: 1.25rem 0;
 	text-align: center;
 	margin-top: 2.5rem;
+}
+
+/*DARKMODE*/
+.darkmode-toggle {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 15px;
+	background-color: var(--primary-color);
+	color: var(--bgclr-alfa);
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+@media (max-width: 1000px) {
+	.darkmode-toggle span {
+		display: none;
+	}
 }

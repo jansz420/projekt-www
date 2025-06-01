@@ -11,15 +11,13 @@
 
 <body>
     <header>
-        <img src="images/logo.png" width="4%" height="4%" alt="logo">
+        <img src="images/logo.png" height="80" width="80" alt="logo">
         <h1><a href="index.html">Lunchito Boxito</a></h1>
         <nav>
-            <ul>
+            <img src="images/triangle.png" height="120" width="150" alt="ikona rozwijanego menu" id="dropdown-toggle">
+            <ul id="default-menu">
                 <li><a href="diets.html">Diety</a></li>
-                <li><a href="Menu">Menu</a></li>
-                <li><a href="Cennik">Cennik</a></li>
-                <li><a href="Promocje">Promocje</a></li>
-                <li><a href="Dostawa">Dostawa</a></li>
+                <li><a href="promotion.html">Promocje</a></li>
                 <li><a href="about-us.html">O nas</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
@@ -98,7 +96,7 @@
         </div>
     </section>
     <section id="opinie" class="opinie">
-        <div class="container" data-aos="fade-in">
+        <div class="container">
             <h2>Opinie naszych klientów</h2>
             <div class="opinia">
                 <p>"Najlepszy catering! Smacznie, zdrowo i na czas!"</p>
@@ -110,12 +108,14 @@
             </div>
         </div>
     </section>
+    <button class="darkmode-toggle" onclick="toggleTheme()">🌙 <span>Tryb ciemny</span></button>
 
-    <footer id="kontakt">
+    <footer>
         <div class="container">
-            <p>&copy; 2025 Lunchito Boxito| kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
+            <p>&copy; 2025 Lunchito Boxito | kontakt@lunchitoboxito.pl | tel. 123-456-789</p>
         </div>
     </footer>
+
 </body>
 
 </html>

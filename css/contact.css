@@ -1,114 +1,145 @@
 .contact {
-    background-image: url("../images/contact-bg.jpg");
+	background-image: url("../images/contact-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: var(--scd-text-color);
 	padding: 10.25rem 0;
 	text-align: center;
-	margin-top: -6rem;
+	margin-top: -7rem;
 	min-height: 25rem;
 }
 
 .contact h1 {
-    background-color: var(--bgclr-alfa);
+	background-color: var(--bgclr-alfa);
 	color: var(--primary-color);
 	border-radius: 1rem;
 	max-width: 35rem;
-    font-size: 2em;
-    margin: 2rem auto;
-    
+	font-size: 2em;
+	margin: 2rem auto;
 }
 
 .contact-boxes {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-    width: 80%;
-    margin: auto;
+	width: 80%;
+	margin: auto;
 }
 
 .contact-box {
-    background-color: var(--bgclr-alfa);
+	background-color: var(--bgclr-alfa);
 	color: var(--primary-color);
 	border-radius: 1rem;
 	width: 35rem;
-    max-height: 50rem;
-    min-height: 20rem;
-    margin: 2rem;
-    padding: 2rem;
-    position: relative;
+	max-height: 50rem;
+	min-height: 20rem;
+	margin: 2rem;
+	padding: 2rem;
+	position: relative;
 }
 
 .contact-box form {
-    padding: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
 }
 
 .contact-box form input {
-    width: 46%;
-    height: 2rem;
-    margin: 1%;
+	width: 46%;
+	height: 2rem;
+	margin: 1%;
+    background-color: var(--input-color);
+	border-radius: 1rem;
+    color: var(--primary-color);
+	padding: 1%;
+	border: none;
+	transition-duration: 300ms;
+}
+
+@media (max-width: 600px) {
+	.contact-box form input {
+		min-width: 95%;
+	}
 }
 
 .contact-box form textarea {
-    height: 10rem;
-    width: 95%;
-    margin: 1%;
-    max-width: 95%;
-    min-width: 95%;
-    max-height: 35rem;
-    min-height: 10rem;
-    font-family: Arial, sans-serif;
+	height: 10rem;
+	width: 95%;
+	margin: 1%;
+	max-width: 95%;
+	min-width: 95%;
+	max-height: 35rem;
+	min-height: 10rem;
+	font-family: Arial, sans-serif;
+    background-color: var(--input-color);
+    color: var(--primary-color);
+	border-radius: 1rem;
+	padding: 1%;
+	border: none;
+	outline: none;
+	transition-duration: 300ms;
+}
+
+.contact-box form input:focus, .contact-box form textarea:focus {
+	outline: 0.2em solid var(--secondary-color);
 }
 
 .contact-box form button {
-    width: 10rem;
-    height: 2.5rem;
-    font-size: 1.3em;
-    background-color: #c62828;
-    color: var(--text-color);
-    border-radius: 1rem;
-    border: none;
-    font-weight: bold;
-    transition-duration: 200ms;
+	width: 10rem;
+	height: 2.5rem;
+	font-size: 1.3em;
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	border-radius: 1rem;
+	border: none;
+	font-weight: bold;
+	transition-duration: 200ms;
 	transition-timing-function: ease-out;
 }
 
 .contact-box form button:hover {
-    background-color: var(--bgclr-alfa);
-    color: #c62828;
-    cursor: pointer;
+	background-color: var(--bgclr-alfa);
+	color: var(--secondary-color);
+	cursor: pointer;
 }
 
 .contact-box ul {
-    list-style-type: square;
-    text-align: left;
-    font-weight: bold;
+	list-style-type: square;
+	text-align: left;
+	font-weight: bold;
 }
 .contact-box p {
-    text-align: left;
-    font-weight: bold;
+	text-align: left;
+	font-weight: bold;
 }
 
 #overlay {
-    display: flex;
-    position: absolute;
-    height: inherit;
-    width: inherit;
-    inset: 0;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    background-color: var(--scd-text-color);
-    color: var(--bgclr-alfa);
-    border-radius: 1rem;
-    transition: ease-in-out 0.3s;
-    opacity: 0;
-    pointer-events: none;
-    padding: 5% 10%;
+	display: flex;
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	inset: 0;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	background-color: var(--scd-text-color);
+	color: var(--bgclr-alfa);
+	border-radius: 1rem;
+	transition: ease-in-out 0.3s;
+	opacity: 0;
+	pointer-events: none;
+	padding: 5% 10%;
 }
 
 #overlay.active-overlay {
-    opacity: 0.95;
-    pointer-events: all;
+	opacity: 0.95;
+	pointer-events: all;
+}
+
+#contact-error {
+	background-color: var(--secondary-color);
+	border: 0.1em solid var(--text-color);
+	padding: 1%;
+	color: var(--text-color);
+	display: none;
 }
