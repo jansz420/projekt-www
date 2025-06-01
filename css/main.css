@@ -1,7 +1,6 @@
 :root {
 	--primary-color: #333333;
-	--primary-color-alfa2: #434343cc;
-	--primary-color-alfa: #f9f9f9cc;
+	--primary-color-alfa: #434343cc;
 	--secondary-color: #c62828;
 	--text-color: #eaeaea;
 	--scd-text-color: #1c2030;
@@ -91,7 +90,7 @@ nav ul li a {
 }
 .active {
 	/* background-color: var(--bgclr); */
-	background-color: var(--bgclr-alfa);
+	background-color: var(--primary-color-alfa);
 	border-radius: 80vw;
 	padding: 10px;
 }
