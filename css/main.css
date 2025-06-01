@@ -7,7 +7,7 @@
 	--bgclr: #f9f9f9;
 	--bgclr2: #fefefe;
 	--bgclr3: #eaeaea;
-	--bgclr-alfa: #f9f9f9b0;
+	--bgclr-alfa: #e1dfdfb0;
 	--footer-color: #333333;
 	--input-color: #fff;
 	--box-shadow: rgba(0, 0, 0, 0.2);
@@ -48,7 +48,7 @@ header {
 	min-height: 7%;
 	position: sticky;
 	top: 0;
-	background-color: var(--primary-color-alfa);
+	background-color: var(--bgclr-alfa);
 	z-index: 1;
 }
 header img {
@@ -60,12 +60,11 @@ header img {
 header h1 {
 	margin-right: auto;
 	margin-left: 1%;
-
 	float: left;
 }
 
 header h1 a {
-	color: var(--text-color);
+	color: var(--primary-color);
 	font-size: 1.2rem;
 	transition-duration: 200ms;
 	transition-timing-function: ease-out;
@@ -84,15 +83,14 @@ nav ul li {
 
 nav ul li a {
 	text-decoration: none;
-	color: var(--primary-color);
 	font-weight: bold;
-	color: var(--text-color);
+	color: var(--primary-color);
 	transition-duration: 200ms;
 	transition-timing-function: ease-out;
 }
 .active {
 	/* background-color: var(--bgclr); */
-	background-color: var(--bgclr-alfa);
+	background-color: var(--primary-color-alfa);
 	border-radius: 80vw;
 	padding: 10px;
 }
