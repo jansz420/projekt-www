@@ -186,3 +186,37 @@ function toggleTheme() {
 	}
 }
 
+//FILTROWANIE DIET
+let vegeActive = true;
+let meatActive = true;
+
+function updateButtonStyles() {
+    document.getElementById("vege-button").classList.toggle("active", vegeActive);
+    document.getElementById("no-vege-button").classList.toggle("active", meatActive);
+}
+
+function loadFilteredDiets() {
+    const params = new URLSearchParams();
+    if (vegeActive) params.append("wege", "1");
+    if (meatActive) params.append("meat", "1");
+
+    fetch("list.php?" + params.toString())
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("list").innerHTML = html;
+        });
+
+    updateButtonStyles();
+}
+
+document.getElementById("vege-button").addEventListener("click", () => {
+    vegeActive = !vegeActive;
+    loadFilteredDiets();
+});
+
+document.getElementById("no-vege-button").addEventListener("click", () => {
+    meatActive = !meatActive;
+    loadFilteredDiets();
+});
+
+window.addEventListener("DOMContentLoaded", loadFilteredDiets);
