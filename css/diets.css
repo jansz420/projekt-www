@@ -30,6 +30,31 @@
     background-color: var(--primary-color);
 }
 
+#sort-options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+#sort-options label {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+#sort-select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: var(--bgclr3);
+  transition: all 0.2s ease-in-out;
+}
+
+#sort-select:hover {
+  border-color: #999;
+  background-color: var(--bgclr3);
+}
+
 #list {
 	display: inline-block;
 	text-align: center;

@@ -23,14 +23,22 @@
             </ul>
             <img src="images/triangle.png" alt="menu" id="dropdown-toggle">
         </nav>
-
     </header>
-
     <section id="diets">
         <h3>Znajdź swoją dietę</h3>
             <div id="diet-filter-buttons" class="filter-buttons">
                 <button id="vege-button" class="filter-button active">Dieta Wegetariańska</button>
                 <button id="no-vege-button" class="filter-button active">Dieta Mięsna</button>
+            </div>
+            <div id="sort-options" class="filter-buttons">
+                <label for="sort-select">Sortuj według:</label>
+                <select id="sort-select" class="filter-button">
+                    <option value="">Domyślnie</option>
+                    <option value="price_asc">Cena rosnąco</option>
+                    <option value="price_desc">Cena malejąco</option>
+                    <option value="calories_asc">Kaloryczność rosnąco</option>
+                    <option value="calories_desc">Kaloryczność malejąco</option>
+                </select>
             </div>
     <section id="list"></section>
     <button class="darkmode-toggle" onclick="toggleTheme()">🌙 <span>Tryb ciemny</span></button>
