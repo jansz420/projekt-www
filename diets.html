@@ -53,30 +53,10 @@
     </section>
     <section id="diets">
         <h3>Znajdź swoją dietę</h3>
-            <form id="filter-panel">   
-                <fieldset>
-                    <legend>Cena</legend>
-                    <label for="min-price">Od:</label>
-                    <input type="text" id="min-price">
-                    <label for="max-price">Do:</label>
-                    <input type="text" id="max-price">
-                </fieldset>
-                <fieldset>
-                    <legend>Rodzaj diety</legend>
-                    <input type="checkbox" id="vege-button" checked>
-                    <label>Dieta wegetariańska</label>
-                    <input type="checkbox" id="no-vege-button" checked>
-                    <label>Dieta mięsna</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Kaloryczność</legend>
-                    <label for="min-calories">Od:</label>
-                    <input type="text" id="min-calories">
-
-                    <label for="max-calories">Do:</label>
-                    <input type="text" id="max-calories">
-                </fieldset>
-            </form>
+            <div id="diet-filter-buttons" class="filter-buttons">
+                <button id="vege-button" class="filter-button active">Dieta Wegetariańska</button>
+                <button id="no-vege-button" class="filter-button active">Dieta Mięsna</button>
+            </div>
     <section id= "list"></section>
     </section>
     <footer id="kontakt">
@@ -88,9 +68,37 @@
 
 </html>
 <script>
-            fetch("list.php")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("list").innerHTML = html;
-                })
+let vegeActive = true;
+let meatActive = true;
+
+function updateButtonStyles() {
+    document.getElementById("vege-button").classList.toggle("active", vegeActive);
+    document.getElementById("no-vege-button").classList.toggle("active", meatActive);
+}
+
+function loadFilteredDiets() {
+    const params = new URLSearchParams();
+    if (vegeActive) params.append("wege", "1");
+    if (meatActive) params.append("meat", "1");
+
+    fetch("list.php?" + params.toString())
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("list").innerHTML = html;
+        });
+
+    updateButtonStyles();
+}
+
+document.getElementById("vege-button").addEventListener("click", () => {
+    vegeActive = !vegeActive;
+    loadFilteredDiets();
+});
+
+document.getElementById("no-vege-button").addEventListener("click", () => {
+    meatActive = !meatActive;
+    loadFilteredDiets();
+});
+
+window.addEventListener("DOMContentLoaded", loadFilteredDiets);
 </script>
