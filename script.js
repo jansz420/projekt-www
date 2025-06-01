@@ -199,6 +199,9 @@ function loadFilteredDiets() {
     const params = new URLSearchParams();
     if (vegeActive) params.append("wege", "1");
     if (meatActive) params.append("meat", "1");
+	
+	const sort = document.getElementById("sort-select")?.value;
+    if (sort) params.append("sort", sort);
 
     fetch("list.php?" + params.toString())
         .then(res => res.text())
@@ -208,6 +211,8 @@ function loadFilteredDiets() {
 
     updateButtonStyles();
 }
+
+document.getElementById("sort-select").addEventListener("change", loadFilteredDiets);
 
 document.getElementById("vege-button").addEventListener("click", () => {
     vegeActive = !vegeActive;

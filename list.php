@@ -18,7 +18,25 @@ if (empty($conditions)) {
 
 $whereClause = "WHERE " . implode(" OR ", $conditions);
 
-$zap = "SELECT * FROM diety $whereClause";
+$orderBy = "";
+if (isset($_GET['sort'])) {
+    switch ($_GET['sort']) {
+        case 'price_asc':
+            $orderBy = "ORDER BY cena ASC";
+            break;
+        case 'price_desc':
+            $orderBy = "ORDER BY cena DESC";
+            break;
+        case 'calories_asc':
+            $orderBy = "ORDER BY kalorycznosc ASC";
+            break;
+        case 'calories_desc':
+            $orderBy = "ORDER BY kalorycznosc DESC";
+            break;
+    }
+}
+
+$zap = "SELECT * FROM diety $whereClause $orderBy";
 $result = mysqli_query($pol, $zap);
 
 if ($result && $result->num_rows > 0) {
