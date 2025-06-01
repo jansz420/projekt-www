@@ -1,23 +1,76 @@
+#diets h3 {
+	text-align: center;
+	margin: 0.5rem 0rem;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color-alfa);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button.active {
+    background-color: #00903c;
+    color: white;
+}
+
+.filter-button:not(.active):hover {
+    background-color: var(--primary-color);
+}
+
 #list {
 	display: inline-block;
 	text-align: center;
+	
+}
+
+#list p{
+	margin-left: 1rem;
 }
 
 .single-product {
-	height: 35rem;
+	height: 37rem;
     margin: 2.5rem;
     padding: 2.5rem;
 	width: 25rem;
-	display: inline-block;
+	display: inline-grid;
 	border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     background: var(--bgclr);
 }
 
-.single-product:hover {
-	background-color:var(--bgclr-alfa);
-}
 .single-product img {
 	height: 20rem;
 	width: 20rem;
+}
+
+.single-product:hover {
+	height: 37.5rem;
+	width: 25.5rem;
+	margin: 2.25rem;
+}
+
+.single-product:hover img {
+	height: 20.25rem;
+	width: 20.25rem;
+}
+
+.single-product:hover .product-body {
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+	margin-top: 0rem;
+	margin-bottom: 0.5rem;
+
 }
