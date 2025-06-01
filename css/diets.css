@@ -49,11 +49,15 @@
 	border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     background: var(--bgclr);
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
 }
 
 .single-product img {
 	height: 20rem;
 	width: 20rem;
+	transition: none;
 }
 
 .single-product:hover {
@@ -67,6 +71,9 @@
 	width: 20.25rem;
 }
 
+.single-product .product-body {
+	transition: none;;
+}
 .single-product:hover .product-body {
 	margin-right: 0.25rem;
 	margin-left: 0.25rem;
